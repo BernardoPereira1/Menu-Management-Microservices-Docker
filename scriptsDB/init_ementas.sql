@@ -14,7 +14,11 @@ CREATE TABLE IF NOT EXISTS Ementas (
 );
 
 CREATE TABLE IF NOT EXISTS Utilizador (
-  id int(11) NOT NULL,
+  id int(11) NOT NULL AUTO_INCREMENT,
   username varchar(50) NOT NULL,
-  password varchar(255) NOT NULL
+  password varchar(255) NOT NULL,
+  PRIMARY KEY (id)
 );
+
+INSERT INTO Utilizador (username, password) 
+VALUES ('admin', '$2y$10$IqPK3W8zlELjF1yMNx6dU.56iO7noXcjGqSD3wlzzTUiz4oT0Vo46');
