@@ -61,19 +61,8 @@ O sistema utiliza duas bases de dados MySQL:
 - Tabela `Alergenos`: Gerencia os alérgenos
 
 ## Instalação e Configuração
-
-Existem duas opções para instalar e executar o sistema:
-
-### Opção 1: Importando Arquivos .tar (Recomendado)
-1. Extraia o arquivo DockerContainers.zip, que contém os arquivos .tar dos contentores
-2. Para cada arquivo .tar encontrado no .zip, importe usando:
-   ```bash
-   docker load -i nome_do_arquivo.tar
-   ```
-3. Após importar todos os contentores, inicie-os e acesse a aplicação em `http://localhost`
-
-### Opção 2: Usando Docker Compose
-1. Caso prefira criar novos contentores, execute no diretório do projeto:
+Docker Compose
+1. execute no diretório do projeto:
    ```bash
    docker-compose up -d
    ```
