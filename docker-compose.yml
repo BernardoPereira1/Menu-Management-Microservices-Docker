@@ -1,0 +1,52 @@
+services:
+  web:
+    build: .
+    container_name: web_server
+    volumes:
+      - ./www:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db_ementas
+      - db_alergenos
+
+  db_ementas:
+    image: mariadb
+    container_name: db_ementas
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ementas_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_ementas_data:/var/lib/mysql
+
+  db_alergenos:
+    image: mariadb
+    container_name: db_alergenos
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: alergenos_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3308:3306"
+    volumes:
+      - db_alergenos_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_ARBITRARY: 1
+
+volumes:
+  db_ementas_data:
+  db_alergenos_data:
