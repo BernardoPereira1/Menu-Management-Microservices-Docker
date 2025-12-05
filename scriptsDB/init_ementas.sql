@@ -1,12 +1,3 @@
-USE alergenos_db;
-
-CREATE TABLE IF NOT EXISTS Alergenos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    alergeno VARCHAR(255) NOT NULL
-);
-
-
-
 USE ementas_db;
 
 CREATE TABLE IF NOT EXISTS Prato (
@@ -27,4 +18,3 @@ CREATE TABLE IF NOT EXISTS Utilizador (
   username varchar(50) NOT NULL,
   password varchar(255) NOT NULL
 );
-

@@ -1,0 +1,6 @@
+USE alergenos_db;
+
+CREATE TABLE IF NOT EXISTS Alergenos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    alergeno VARCHAR(255) NOT NULL
+);
