@@ -74,7 +74,8 @@ Nota: Todos os arquivos necessários já estão incluídos no projeto, incluindo
 ## Acesso ao Sistema
 
 - **Área Pública**: Visualização das ementas
-- **Área Administrativa**: Acesso através do login (requer autenticação) User: admin Password: admin
+- **Área Administrativa**: Acesso através do login (requer autenticação)
+- User: admin Password: admin
 
 ## Segurança
 
